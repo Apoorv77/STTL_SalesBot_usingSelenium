@@ -279,7 +279,7 @@ pred_lr=clf_lr.predict(text_converted)
 pred_DT=clf_dt.predict(text_converted)
 pred_svc =clf_svc.predict(text_converted)
 pred_nb=clf_nb.predict(text_converted)
-pred_tot=[sum(x) for x in zip(3*pred_lr,pred_DT,pred_svc,pred_nb)]
+pred_tot=[sum(x) for x in zip(pred_lr,pred_DT,pred_svc,pred_nb)]
 pred=[int(x>1) for x in pred_tot]
 filtered_posts=[]
 for i in range(len(pred)):
